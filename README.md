@@ -26,6 +26,7 @@ Use currently playing track to status in VK.com
 ```
 python3 spotify2vkstatus.py
 ```
+![Screenshot](screenshot.png)
 
 ## TODO
 - [x] Spotify token auto refresh (every hour)
