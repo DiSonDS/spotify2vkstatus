@@ -1,5 +1,7 @@
 # spotify2vkstatus
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/978f1de803844a0b99e9e88e1d06afc9)](https://app.codacy.com/app/DiSonDS/spotify2vkstatus?utm_source=github.com&utm_medium=referral&utm_content=DiSonDS/spotify2vkstatus&utm_campaign=Badge_Grade_Dashboard)
+
 Use currently playing track to status in VK.com
 
 ## Requirements
