@@ -21,8 +21,6 @@ def main():
     vk = vk_session.get_api()
 
     last_id = 0
-    results = vk.status.get()
-    status_backup = results['text']
 
     while True:
         if sp_session:
@@ -34,6 +32,9 @@ def main():
                 sp_session = get_spotify_token()
                 continue
             if not results:
+                if last_id:
+                    last_id = 0
+                    vk.status.set(text="")
                 time.sleep(INTERVAL)
                 continue
             is_playing = results['is_playing']
@@ -52,7 +53,7 @@ def main():
                     time.sleep(INTERVAL)
             else:
                 last_id = 0
-                vk.status.set(text=status_backup)
+                vk.status.set(text="")
                 time.sleep(INTERVAL)
         else:
             print(f"Can't get token {SPOTIFY_USERNAME}")
